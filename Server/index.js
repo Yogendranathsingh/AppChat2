@@ -14,7 +14,7 @@ const cors= require('cors')
 
 
 app.use(cors({
-    origin: "*", // Replace with your frontend URL
+    origin:'http://localhost:5173', // Replace with your frontend URL
     credentials: true // Allows credentials (cookies, etc.) to be sent
 }))
 app.use(cookieParser())
