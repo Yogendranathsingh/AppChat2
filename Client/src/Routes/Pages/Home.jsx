@@ -15,7 +15,7 @@ const Home = ({children}) => {
     useEffect(() => {
 
         const token = sessionStorage.getItem('token');
-        if (!token) {
+        if (token == '' || token == undefined) {
             console.error('Token not found');
             return;
         }
@@ -23,7 +23,8 @@ const Home = ({children}) => {
         const socketConnection = io(`${import.meta.env.VITE_BACKEND_URL}`, {
             auth: {
                 token,
-            }
+            },
+            transports: ['websocket']
         })
         dispatch(setSocketConnection(socketConnection))
 
