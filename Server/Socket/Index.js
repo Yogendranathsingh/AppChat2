@@ -11,11 +11,10 @@ const mongoose= require('mongoose')
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Change to your frontend URL when deploying
-    methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
+    origin: 'http://localhost:5173',  // Frontend origin
+    methods: ['GET', 'POST'],
     credentials: true
-  }
+}
 })
 
 const onlineUser = new Set()
