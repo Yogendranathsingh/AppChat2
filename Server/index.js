@@ -9,6 +9,8 @@ const cookieParser= require('cookie-parser')
 const {app,server}= require('./Socket/Index.js')
 const cors= require('cors')
 
+// Allow preflight requests (OPTIONS)
+app.options('*', cors());
 
 
 app.use(cors({
