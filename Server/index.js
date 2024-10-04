@@ -10,7 +10,7 @@ const {app,server}= require('./Socket/Index.js')
 const cors= require('cors')
 
 // Allow preflight requests (OPTIONS)
-app.options('*', cors());
+
 
 
 app.use(cors({
@@ -22,6 +22,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.use('api',router)
+
+app.options('*', cors());
 
 app.get('/',(req,res)=>{
     res.send('today is 31st august.mai phone me cha rha kya?')
