@@ -49,7 +49,7 @@ const RegisterPage = () => {
         console.log('data is: ',data)
         const url= `${import.meta.env.VITE_BACKEND_URL}/api/register`
         try {
-            const response= await axios.post(url,data)
+            const response= await axios.post(url,data,{withCredentials:true})
             toast.success(response.data.message)
             if(response.data.success){
                 setData({
