@@ -1,0 +1,11 @@
+.authBox{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding-block: 5px;
+    box-shadow: 0px 0px 50px lightblue;
+}
+
+img{
+    height: 80px;
+}
