@@ -77,12 +77,14 @@ function SideBar({ user }) {
     }, [socketConnection, params.userId]);
 
     async function handleLogout(){
+        localStorage.setItem('token','');
+        sessionStorage.setItem('token','');
+        window.location.reload();
         const url= `${import.meta.env.VITE_BACKEND_URL}/api/logout`
         const response= await axios.get(url,{ withCredentials: true })
-        if(response.data.success){
-            localStorage.setItem('token','');
-            sessionStorage.setItem('token','');
-        }
+        // if(response.data.success){
+            
+        // }
         window.location.reload()
         // console.log('response: ',response);
     }

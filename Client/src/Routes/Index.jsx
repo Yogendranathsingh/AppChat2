@@ -28,7 +28,7 @@ const router= createBrowserRouter([
             // },
             {
                 path:'',
-                element:isAuthenticated() ? <Home></Home> : <Navigate to='/register' />,
+                element:isAuthenticated() ? <Home/> : <AuthLayout><RegisterPage/></AuthLayout>,
                 
             },
             {
