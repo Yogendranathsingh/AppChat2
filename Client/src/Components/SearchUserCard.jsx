@@ -1,5 +1,5 @@
 import Avatar from './Avatar'
-import './searchUserCard.css'
+import './SearchUserCard.css'
 import { Link } from 'react-router-dom';
 
 
